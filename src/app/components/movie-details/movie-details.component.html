@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="text-center" *ngIf="!movie_Details">
+        <p>Wait, while movie is loading...</p>
+    </div>
+    <div class="row" *ngIf="movie_Details">
+        <div class="col-md-5">
+            <img [src]="movie_Details.Poster" alt="" class="img w-100 img-fluid">
+        </div>
+        <div class="col-md-7">
+
+            <table class="table table-striped table-hover">
+                <tbody>
+                    <tr>
+                        <td>Title:</td>
+                        <td>
+                            <h4 class="text-white">{{ movie_Details.Title }}</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Type:</td>
+                        <td>{{ movie_Details.Type}}</td>
+                    </tr>
+                    <tr>
+                        <td>Released:</td>
+                        <td>{{ movie_Details.Released}}</td>
+                    </tr>
+                    <tr>
+                        <td>imdbRating:</td>
+                        <td>{{ movie_Details.imdbRating}}</td>
+                    </tr>
+                    <tr>
+                        <td>Runtime: </td>
+                        <td>{{movie_Details.Runtime}}</td>
+                    </tr>
+                    <tr>
+                        <td>Genre:</td>
+                        <td>{{movie_Details.Genre}}</td>
+                    </tr>
+                    <tr>
+                        <td>Actors:</td>
+                        <td>{{ movie_Details.Actors}}</td>
+                    </tr>
+                    <tr>
+                        <td>Director:</td>
+                        <td>{{ movie_Details.Director}}</td>
+                    </tr>
+                    <tr>
+                        <td>Writer:</td>
+                        <td>{{ movie_Details.Writer}}</td>
+                    </tr>
+                    <tr>
+                        <td>Story-line:</td>
+                        <td>{{ movie_Details.Plot}}</td>
+                    </tr>
+                    <tr>
+                        <td>Languages:</td>
+                        <td>{{ movie_Details.Language}}</td>
+                    </tr>
+                    <tr>
+                        <td>Country:</td>
+                        <td>{{ movie_Details.Country}}</td>
+                    </tr>
+                    <tr>
+                        <td>Awards:</td>
+                        <td>{{ movie_Details.Awards}}</td>
+                    </tr>
+                    <tr>
+                        <td>Box-Office:</td>
+                        <td>{{ movie_Details.BoxOffice}}</td>
+                    </tr>
+                    <tr>
+                        <td>Production:</td>
+                        <td>{{ movie_Details.Production}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-secondary float-right" (click)="goBack()">back</button>
+        </div>
+    </div>
+</div>

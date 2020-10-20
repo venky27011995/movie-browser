@@ -1,0 +1,43 @@
+@keyframes movie-text{
+    from{
+        bottom: 30px;
+    }
+    to{
+        bottom: 0px;
+        
+    }
+}
+@keyframes cards{
+    from{height:  0%;}
+    to{height: 100%;}
+}
+
+.movie-card{
+z-index: 0;
+animation: 1s cards;
+transition: 1s animation;
+}
+.movie-card:hover{
+    transform: scale(1.02);
+}
+
+.movie-card:hover img{
+    box-shadow: 0 0 4px #f3f3f3;
+}
+.movie-card-info{
+   display: none;
+}
+.movie-card:hover .movie-card-info{
+    display: block;
+    background: #ff0000a3;
+    margin-top: -80px;
+    z-index: 0;
+    position: relative;
+animation: 0.5s movie-text;
+transition: 1s animation;
+height: 80px;
+}
+.movie-poster {
+    height: 390px;
+    width: 100%;
+}

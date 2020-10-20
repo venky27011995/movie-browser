@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'movie-browser';
+  movies = {
+    "movies1": "Avengers",
+    "movie2": "IronMan",
+    "movie3": "Hulk",
+    "movie4": "Black Panther"
+  }
+
 }
